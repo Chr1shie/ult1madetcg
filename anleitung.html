@@ -177,7 +177,7 @@
     <h3>Der Stern: Standard-Account</h3>
     <p>Tippst du bei einem Account auf den Stern, wird er zum <strong>Standard-Account</strong> (der Stern füllt sich in der Akzentfarbe). Es kann immer nur einen geben — der Stern wandert also mit, wenn du ihn woanders setzt, und ein Tipp auf den gefüllten Stern entfernt den Standard wieder komplett. Der Standard-Account bestimmt, was beim App-Start passiert:</p>
     <ul>
-      <li><strong>Stern gesetzt:</strong> Die App öffnet beim Start <em>immer</em> direkt diesen Account — auch dann, wenn er eine PIN hat. Der Stern schlägt alles; die PIN greift dann nur noch, wenn jemand von einem anderen Account zu diesem wechseln will.</li>
+      <li><strong>Stern gesetzt:</strong> Die App wählt beim Start immer diesen Account. Hat er keine PIN, öffnet er direkt; hat er eine, zeigt die App den Auswahlbildschirm mit bereits aufgeklapptem PIN-Feld genau bei diesem Account — auswählen übernimmt der Stern, die PIN wird trotzdem verlangt.</li>
       <li><strong>Kein Stern:</strong> Die App öffnet den zuletzt genutzten Account automatisch — <em>außer</em> er ist PIN-geschützt. Dann zeigt sie stattdessen den Auswahlbildschirm <em>„Welcher Account?"</em>, damit sich der geschützte Account nicht stillschweigend öffnet.</li>
     </ul>
     <h3>PINs: Wer sieht was?</h3>
@@ -364,7 +364,7 @@
     <h3>The star: default account</h3>
     <p>Tap the star next to an account and it becomes the <strong>default account</strong> (the star fills in the accent color). There can only ever be one — setting the star elsewhere moves it, and tapping a filled star removes the default entirely. The default account decides what happens at launch:</p>
     <ul>
-      <li><strong>Star set:</strong> The app <em>always</em> opens straight into this account — even if it has a PIN. The star beats everything; the PIN then only applies when someone tries to switch to this account from another one.</li>
+      <li><strong>Star set:</strong> The app always chooses this account at launch. If it has no PIN, it opens directly; if it does, the app shows the account picker with the PIN field already unfolded at exactly this account — the star handles the choosing, but the PIN is still required.</li>
       <li><strong>No star:</strong> The app automatically opens the account you used last — <em>unless</em> it is PIN-protected. In that case it shows the <em>"Which account?"</em> picker instead, so the protected account never opens silently.</li>
     </ul>
     <h3>PINs: who sees what?</h3>
