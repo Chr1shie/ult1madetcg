@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="de">
+<!--
+  Datenschutzerklärung (20.08.) - Pflicht-URL für Google Play / App Store.
+  Gleiche Design-Tokens wie Homepage/Anleitung, zweisprachig über zwei
+  Inhaltsblöcke + localStorage-Schlüssel "ult1madeLang" (geteilt mit den
+  anderen Seiten). Inhalt spiegelt die Architektur wahrheitsgemäß: keine
+  Konten, keine Entwickler-Cloud, keine Tracker - es gibt schlicht keine
+  Datenerhebung durch den Anbieter.
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ult1made TCG — Datenschutz / Privacy</title>
+<style>
+  :root {
+    --bg: #0a0a0d; --surface: #15151b; --line: rgba(255,255,255,0.1);
+    --text: #f2f2f2; --muted: rgba(242,242,242,0.64);
+    --accent: #FF9800; --accent-soft: rgba(255,152,0,0.14);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; }
+  a { color: var(--accent); }
+  header.top { position: sticky; top: 0; display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: rgba(10,10,13,0.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+  header.top .brand { font-weight: 800; }
+  header.top .brand span { color: var(--accent); }
+  header.top .grow { flex: 1; }
+  .langBtn { background: #1c1c24; color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer; }
+  .langBtn.active { background: var(--accent); color: #10100f; border-color: var(--accent); font-weight: 700; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 6px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 1.15rem; margin: 30px 0 6px; padding-top: 12px; border-top: 1px solid var(--line); }
+  p, li { margin: 8px 0; max-width: 70ch; color: var(--text); }
+  ul { margin-left: 22px; }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  .box { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 10px 14px; margin: 14px 0; max-width: 70ch; }
+  @media print { :root { --bg:#fff; --text:#111; --muted:#555; --line:#ccc; } body { background:#fff; } .langBtn { display:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">Ult1made<span>TCG</span> — <span id="headTitle">Datenschutz</span></div>
+  <div class="grow"></div>
+  <button class="langBtn" id="lang-de">DE</button>
+  <button class="langBtn" id="lang-en">EN</button>
+</header>
+
+<main id="content-de">
+  <h1>Datenschutzerklärung <span>Ult1made TCG</span></h1>
+  <p class="muted">Stand: 20. August 2026 · gilt für die App (iOS/Android), die optionale Server-Software und diese Website</p>
+
+  <div class="box"><strong>Das Wichtigste in einem Satz:</strong> Ult1made TCG erhebt, speichert und teilt keinerlei personenbezogene Daten mit dem Anbieter — es gibt keine Konten, keine Anbieter-Cloud, keine Werbung und keine Analyse-Dienste.</div>
+
+  <h2>Verantwortlicher</h2>
+  <p>Christian Meyer<br>E-Mail: <a href="mailto:chrishie@gmx.de">chrishie@gmx.de</a></p>
+
+  <h2>Welche Daten die App verarbeitet — und wo sie bleiben</h2>
+  <ul>
+    <li><strong>Deine Sammlung</strong> (Karten, Binder, Decks, Wunschlisten, Vault, Preise, eigene Fotos) liegt ausschließlich <strong>lokal auf deinem Gerät</strong>. Der Anbieter hat darauf keinen Zugriff.</li>
+    <li><strong>Backups</strong> erstellst nur du selbst — als Datei auf deinem Gerät bzw. an dem Ort, den du beim Export wählst.</li>
+    <li><strong>Kamera:</strong> Die App nutzt die Kamera zum Erkennen von Kartennummern und für eigene Produktfotos. Die Auswertung passiert vollständig auf dem Gerät; Aufnahmen werden nicht an den Anbieter übertragen.</li>
+    <li><strong>Accounts in der App</strong> (z.&nbsp;B. für Familienmitglieder) sind rein lokale Profile auf deinem Gerät — keine Registrierung, keine E-Mail-Adresse, keine Übertragung.</li>
+  </ul>
+
+  <h2>Internetzugriffe der App</h2>
+  <p>Die App lädt Kartenkataloge, Kartenbilder und Preisdaten von öffentlich erreichbaren Quellen herunter. Wie bei jedem Internetabruf wird dabei technisch bedingt deine IP-Adresse an die jeweilige Quelle übermittelt; weitere personenbezogene Daten werden nicht gesendet. Die App überträgt keine Inhalte deiner Sammlung an diese Quellen oder an den Anbieter.</p>
+
+  <h2>Optionaler eigener Server</h2>
+  <p>Du kannst die mitgelieferte Server-Software auf eigener Hardware betreiben, um mehrere Geräte zu synchronisieren. Dieser Server gehört und untersteht ausschließlich dir: Die Verbindung läuft direkt zwischen deinen Geräten und deinem Server. Der Anbieter betreibt keine Server, auf denen Sammlungen von Nutzerinnen und Nutzern liegen, und kann auf deine Instanz nicht zugreifen.</p>
+
+  <h2>Käufe</h2>
+  <p>Käufe und Abonnements werden vollständig über den Apple App Store bzw. Google Play abgewickelt. Der Anbieter erhält dabei keine Zahlungsdaten; es gelten die Datenschutzbestimmungen von Apple bzw. Google.</p>
+
+  <h2>Keine Werbung, kein Tracking</h2>
+  <p>Die App enthält keine Werbung, keine Analyse-/Tracking-Dienste und keine Drittanbieter-SDKs, die Daten sammeln. Auch diese Website setzt keine Cookies und bindet keine Tracker ein; sie wird über GitHub Pages ausgeliefert (dabei fallen bei GitHub technisch bedingte Server-Logdaten wie die IP-Adresse an, siehe die Datenschutzhinweise von GitHub).</p>
+
+  <h2>Deine Rechte</h2>
+  <p>Da der Anbieter keine personenbezogenen Daten über dich erhebt oder speichert, gibt es bei ihm auch nichts einzusehen, zu berichtigen oder zu löschen — deine Daten löschst du selbst, indem du sie in der App entfernst oder die App deinstallierst. Für Fragen nach der DSGVO (Auskunft, Berichtigung, Löschung, Beschwerde bei einer Aufsichtsbehörde) erreichst du den Verantwortlichen jederzeit unter der oben genannten E-Mail-Adresse.</p>
+
+  <h2>Änderungen</h2>
+  <p>Diese Erklärung wird angepasst, wenn sich die App ändert. Die jeweils aktuelle Fassung findest du immer unter dieser Adresse.</p>
+</main>
+
+<main id="content-en" style="display:none">
+  <h1>Privacy Policy <span>Ult1made TCG</span></h1>
+  <p class="muted">Last updated: August 20, 2026 · applies to the app (iOS/Android), the optional server software and this website</p>
+
+  <div class="box"><strong>The essentials in one sentence:</strong> Ult1made TCG does not collect, store or share any personal data with the provider — there are no accounts, no provider cloud, no ads and no analytics.</div>
+
+  <h2>Controller</h2>
+  <p>Christian Meyer<br>E-mail: <a href="mailto:chrishie@gmx.de">chrishie@gmx.de</a></p>
+
+  <h2>What data the app processes — and where it stays</h2>
+  <ul>
+    <li><strong>Your collection</strong> (cards, binders, decks, wants, vault, prices, your own photos) lives exclusively <strong>on your device</strong>. The provider has no access to it.</li>
+    <li><strong>Backups</strong> are created only by you — as a file on your device or wherever you choose during export.</li>
+    <li><strong>Camera:</strong> the app uses the camera to recognize card numbers and for your own product photos. All processing happens on the device; captures are never transmitted to the provider.</li>
+    <li><strong>In-app accounts</strong> (e.g. for family members) are purely local profiles on your device — no registration, no e-mail address, no transmission.</li>
+  </ul>
+
+  <h2>The app's internet access</h2>
+  <p>The app downloads card catalogs, card images and price data from publicly available sources. As with any internet request, your IP address is technically transmitted to the respective source; no further personal data is sent. The app never transmits any contents of your collection to these sources or to the provider.</p>
+
+  <h2>Optional self-hosted server</h2>
+  <p>You can run the included server software on your own hardware to sync multiple devices. That server belongs to and is controlled solely by you: the connection runs directly between your devices and your server. The provider operates no servers holding users' collections and cannot access your instance.</p>
+
+  <h2>Purchases</h2>
+  <p>Purchases and subscriptions are handled entirely by the Apple App Store or Google Play. The provider receives no payment data; Apple's and Google's privacy policies apply.</p>
+
+  <h2>No ads, no tracking</h2>
+  <p>The app contains no advertising, no analytics/tracking services and no data-collecting third-party SDKs. This website likewise sets no cookies and embeds no trackers; it is served via GitHub Pages (GitHub technically records server log data such as IP addresses — see GitHub's privacy statement).</p>
+
+  <h2>Your rights</h2>
+  <p>Since the provider does not collect or store any personal data about you, there is nothing to access, rectify or erase on the provider's side — you delete your data yourself by removing it in the app or uninstalling the app. For any GDPR requests (access, rectification, erasure, complaint to a supervisory authority) you can reach the controller at the e-mail address above at any time.</p>
+
+  <h2>Changes</h2>
+  <p>This policy will be updated as the app evolves. The current version can always be found at this address.</p>
+</main>
+
+<script>
+(function () {
+  var de = document.getElementById('content-de');
+  var en = document.getElementById('content-en');
+  var bDe = document.getElementById('lang-de');
+  var bEn = document.getElementById('lang-en');
+  var head = document.getElementById('headTitle');
+  function setLang(l) {
+    de.style.display = l === 'de' ? '' : 'none';
+    en.style.display = l === 'en' ? '' : 'none';
+    bDe.className = 'langBtn' + (l === 'de' ? ' active' : '');
+    bEn.className = 'langBtn' + (l === 'en' ? ' active' : '');
+    head.textContent = l === 'de' ? 'Datenschutz' : 'Privacy';
+    document.documentElement.lang = l;
+    try { localStorage.setItem('ult1madeLang', l); } catch (e) {}
+  }
+  bDe.addEventListener('click', function () { setLang('de'); });
+  bEn.addEventListener('click', function () { setLang('en'); });
+  var stored = null;
+  try { stored = localStorage.getItem('ult1madeLang'); } catch (e) {}
+  var nav = (navigator.language || 'en').slice(0, 2);
+  setLang(stored === 'de' || stored === 'en' ? stored : (nav === 'de' ? 'de' : 'en'));
+})();
+</script>
+</body>
+</html>
