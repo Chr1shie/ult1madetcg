@@ -698,11 +698,43 @@
     tilt(((e.clientX - r.left) / r.width - 0.5) * 2, ((e.clientY - r.top) / r.height - 0.5) * 2);
   });
   stage.addEventListener('mouseleave', () => { card.style.transform = ''; tilt(0, 0); });
-  if (window.DeviceOrientationEvent && 'ontouchstart' in window) {
-    window.addEventListener('deviceorientation', (e) => {
-      if (e.gamma === null) return;
-      tilt(Math.max(-1, Math.min(1, e.gamma / 30)), Math.max(-1, Math.min(1, (e.beta - 45) / 30)));
-    });
+  // Gyro-Neigung (20.08., Nutzer-Wunsch "die Karte und den Effekt mit der
+  // Handy-Bewegung bewegen lassen ... man hält das Handy in der Hand und
+  // nicht flach auf dem Tisch"): Fassung 2. Die erste Fassung feuerte auf
+  // iOS NIE - Safari verlangt seit iOS 13 eine explizite Sensor-Berechtigung
+  // (DeviceOrientationEvent.requestPermission), die nur aus einer
+  // Nutzer-Geste heraus angefragt werden darf. Deshalb: der erste Tipp
+  // irgendwo auf der Seite fragt einmalig an (Android startet direkt).
+  // Und statt einer fest verdrahteten Haltung (vorher beta-45) wird die
+  // ERSTE Messung als Neutral-Lage genommen - egal wie man das Handy
+  // gerade hält - und driftet danach ganz langsam zur aktuellen Lage
+  // zurück, damit sich die Karte nach einem Positionswechsel von selbst
+  // wieder einpendelt.
+  if (typeof DeviceOrientationEvent !== 'undefined' && 'ontouchstart' in window) {
+    var gyroBaseBeta = null, gyroBaseGamma = null;
+    var onGyro = function (e) {
+      if (e.gamma === null || e.beta === null) return;
+      if (gyroBaseBeta === null) { gyroBaseBeta = e.beta; gyroBaseGamma = e.gamma; }
+      gyroBaseBeta += (e.beta - gyroBaseBeta) * 0.004;
+      gyroBaseGamma += (e.gamma - gyroBaseGamma) * 0.004;
+      tilt(
+        Math.max(-1, Math.min(1, (e.gamma - gyroBaseGamma) / 22)),
+        Math.max(-1, Math.min(1, (e.beta - gyroBaseBeta) / 22))
+      );
+    };
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+      var askGyro = function () {
+        document.removeEventListener('click', askGyro);
+        document.removeEventListener('touchend', askGyro);
+        DeviceOrientationEvent.requestPermission().then(function (state) {
+          if (state === 'granted') window.addEventListener('deviceorientation', onGyro);
+        }).catch(function () {});
+      };
+      document.addEventListener('click', askGyro);
+      document.addEventListener('touchend', askGyro);
+    } else {
+      window.addEventListener('deviceorientation', onGyro);
+    }
   }
 </script>
 </body>
