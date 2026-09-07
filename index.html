@@ -241,6 +241,13 @@
     margin-top: 6px; font-size: 0.7rem; font-weight: 700; color: var(--accent);
     border: 1px solid var(--accent); border-radius: 999px; padding: 1px 10px;
   }
+  /* Live-Badges (seit Release 07.09.2026): echte Links, durchgezogener Rahmen */
+  .store-btn.live { border-style: solid; cursor: pointer; transition: border-color .2s, transform .2s; }
+  .store-btn.live:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .store-btn .live-tag {
+    margin-top: 6px; font-size: 0.7rem; font-weight: 700; color: #0b0d12;
+    background: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 10px;
+  }
 
   /* ---------- Footer ---------- */
   footer {
@@ -416,10 +423,10 @@
       </div>
       <div class="principle" data-i18n="srvPrinciple">There is no central cloud, and there never will be one. I don't run servers holding your collections — every instance belongs to the person using it. That's a promise built into the architecture, not a settings toggle.</div>
       <div class="stores">
-        <a class="store-btn" tabindex="0">
+        <a class="store-btn live" href="https://github.com/Chr1shie/Ult1madeTCG-Server" target="_blank" rel="noopener">
           <span class="small">Open Source</span>
           <span class="big">GitHub</span>
-          <span class="soon" data-i18n="soon">coming soon</span>
+          <span class="live-tag" data-i18n="live">available now</span>
         </a>
       </div>
     </div>
@@ -438,14 +445,14 @@
 
 <section class="wrap" id="download">
   <div class="section-head">
-    <h2 data-i18n="dlTitle">Coming to your pocket.</h2>
-    <p data-i18n="dlLede">I'm building Ult1made TCG with Kotlin Multiplatform — one codebase for iOS and Android — and I'm in the final stretch before release.</p>
+    <h2 data-i18n="dlTitle">Now in your pocket.</h2>
+    <p data-i18n="dlLede">Ult1made TCG is live on the App Store — built with Kotlin Multiplatform, one codebase for iOS and Android. The Android version follows on Google Play within the next few days.</p>
   </div>
   <div class="stores">
-    <a class="store-btn" tabindex="0">
+    <a class="store-btn live" href="https://apps.apple.com/app/id6803141402" target="_blank" rel="noopener">
       <span class="small" data-i18n="dlOn1">Download on the</span>
       <span class="big">App Store</span>
-      <span class="soon" data-i18n="soon">coming soon</span>
+      <span class="live-tag" data-i18n="live">available now</span>
     </a>
     <a class="store-btn" tabindex="0">
       <span class="small" data-i18n="dlOn2">Get it on</span>
@@ -453,7 +460,7 @@
       <span class="soon" data-i18n="soon">coming soon</span>
     </a>
   </div>
-  <p class="ipadNote" data-i18n="ipadNote">Launching for iPhone and Android phones first — a proper iPad version, built for the big screen instead of just scaled up, is coming after release.</p>
+  <p class="ipadNote" data-i18n="ipadNote">Available for iPhone and Android phones first — a proper iPad version, built for the big screen instead of just scaled up, is coming later.</p>
 </section>
 
 <footer>
@@ -493,11 +500,11 @@
       srvPrinciple: 'Es gibt keine zentrale Cloud — und es wird nie eine geben. Ich betreibe keine Server mit euren Sammlungen: Jede Instanz gehört der Person, die sie nutzt. Das ist ein Versprechen in der Architektur, kein Schalter in den Einstellungen.',
       termComment: 'ein Befehl, dein eigener Server',
       termToken: '# Pairing-Token für App & Weboberfläche: XXXXXXXX',
-      dlTitle: 'Bald in deiner Hosentasche.',
-      dlLede: 'Ich baue Ult1made TCG mit Kotlin Multiplatform — eine Codebasis für iOS und Android — und bin auf der Zielgeraden zum Release.',
+      dlTitle: 'Jetzt in deiner Hosentasche.',
+      dlLede: 'Ult1made TCG ist im App Store — gebaut mit Kotlin Multiplatform, eine Codebasis für iOS und Android. Die Android-Version folgt in den nächsten Tagen bei Google Play.',
       dlOn1: 'Laden im', dlOn2: 'Jetzt bei',
-      soon: 'bald verfügbar',
-      ipadNote: 'Zum Start gibt es die App für iPhone und Android-Handys — eine richtige iPad-Version, fürs große Display gebaut statt nur hochskaliert, folgt nach dem Release.',
+      soon: 'bald verfügbar', live: 'jetzt verfügbar',
+      ipadNote: 'Die App gibt es für iPhone und Android-Handys — eine richtige iPad-Version, fürs große Display gebaut statt nur hochskaliert, folgt später.',
       legal: 'Ult1made TCG ist ein privates Fan-Projekt und steht in keiner Verbindung zu Pokémon, Nintendo, The Pokémon Company, Bandai Namco, Dragon Ball, One Piece, Digimon, Yu-Gi-Oh! oder Cardmarket. Alle Namen, Bilder und Marken gehören ihren jeweiligen Rechteinhabern.'
     },
     en: {
@@ -527,11 +534,11 @@
       srvPrinciple: "There is no central cloud, and there never will be one. I don't run servers holding your collections — every instance belongs to the person using it. That's a promise built into the architecture, not a settings toggle.",
       termComment: 'one command, your own server',
       termToken: '# Pairing token for app & web UI: XXXXXXXX',
-      dlTitle: 'Coming to your pocket.',
-      dlLede: 'I\'m building Ult1made TCG with Kotlin Multiplatform — one codebase for iOS and Android — and I\'m in the final stretch before release.',
+      dlTitle: 'Now in your pocket.',
+      dlLede: 'Ult1made TCG is live on the App Store — built with Kotlin Multiplatform, one codebase for iOS and Android. The Android version follows on Google Play within the next few days.',
       dlOn1: 'Download on the', dlOn2: 'Get it on',
-      soon: 'coming soon',
-      ipadNote: 'Launching for iPhone and Android phones first — a proper iPad version, built for the big screen instead of just scaled up, is coming after release.',
+      soon: 'coming soon', live: 'available now',
+      ipadNote: 'Available for iPhone and Android phones first — a proper iPad version, built for the big screen instead of just scaled up, is coming later.',
       legal: 'Ult1made TCG is a private fan project and is not affiliated with Pokémon, Nintendo, The Pokémon Company, Bandai Namco, Dragon Ball, One Piece, Digimon, Yu-Gi-Oh! or Cardmarket. All names, images and trademarks belong to their respective owners.'
     }
   };
