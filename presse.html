@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+<!--
+  Presse-Seite (09.09., Promotion-Plan Punkt 2): Kurztext, Fakten,
+  Bildmaterial, Kontakt - damit Blogs/YouTuber alles fertig vorfinden.
+  Gleiche Design-Tokens und Sprachumschaltung wie datenschutz.html;
+  Bilder liegen in press/ (verkleinerte Screenshots, Icon, OG-Bild,
+  Presse-Kit als ZIP), erzeugt aus marketing/appstore per PIL.
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ult1made TCG — Presse / Press</title>
+<meta name="description" content="Press kit for Ult1made TCG: facts, screenshots, logo and contact. Track 15 trading card games in one app with camera scan, binders, decks and an optional self-hosted server.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ult1made TCG — Presse / Press">
+<meta property="og:description" content="Fakten, Screenshots, Logo und Kontakt zur Sammlungs-App für 15 Sammelkartenspiele.">
+<meta property="og:image" content="https://ult1madetcg.com/press/og-image.jpg">
+<meta property="og:url" content="https://ult1madetcg.com/presse.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --bg: #0a0a0d; --surface: #15151b; --line: rgba(255,255,255,0.1);
+    --text: #f2f2f2; --muted: rgba(242,242,242,0.64);
+    --accent: #FF9800; --accent-soft: rgba(255,152,0,0.14);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; }
+  a { color: var(--accent); }
+  header.top { position: sticky; top: 0; display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: rgba(10,10,13,0.92); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); z-index: 5; }
+  header.top .brand { font-weight: 800; }
+  header.top .brand span { color: var(--accent); }
+  header.top .brand a { color: inherit; text-decoration: none; }
+  header.top .grow { flex: 1; }
+  .langBtn { background: #1c1c24; color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer; }
+  .langBtn.active { background: var(--accent); color: #10100f; border-color: var(--accent); font-weight: 700; }
+  main { max-width: 900px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); margin-bottom: 6px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 1.15rem; margin: 34px 0 8px; padding-top: 14px; border-top: 1px solid var(--line); }
+  p, li { margin: 8px 0; max-width: 72ch; }
+  ul { margin-left: 22px; }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  .box { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 10px 14px; margin: 14px 0; max-width: 72ch; }
+  .hero { display: flex; gap: 20px; align-items: center; margin: 18px 0 6px; }
+  .hero img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+  .facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 10px 0; }
+  .facts dt { color: var(--muted); }
+  .facts dd { margin: 0; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin-top: 12px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; border-radius: 12px; border: 1px solid var(--line); display: block; }
+  .shots figcaption { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+  .dl { display: inline-block; background: var(--accent); color: #10100f; font-weight: 700; padding: 10px 16px; border-radius: 999px; text-decoration: none; margin: 8px 8px 0 0; }
+  .dl.secondary { background: #1c1c24; color: var(--text); border: 1px solid var(--line); }
+  .badge { display: inline-block; background: #1c1c24; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; font-size: 0.8rem; margin: 2px 4px 2px 0; }
+  @media (max-width: 600px) { .facts { grid-template-columns: 1fr; gap: 2px; } .facts dt { margin-top: 8px; } }
+  @media print { :root { --bg:#fff; --text:#111; --muted:#555; --line:#ccc; } body { background:#fff; } .langBtn, .dl { display:none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><a href="index.html">Ult1made<span>TCG</span></a> — <span id="headTitle">Presse</span></div>
+  <div class="grow"></div>
+  <button class="langBtn" id="lang-de">DE</button>
+  <button class="langBtn" id="lang-en">EN</button>
+</header>
+
+<main id="content-de">
+  <div class="hero">
+    <img src="press/icon-256.png" alt="Ult1made TCG App-Icon">
+    <div>
+      <h1>Presse &amp; Medien <span>Ult1made TCG</span></h1>
+      <p class="muted">Stand: September 2026 · Alle Texte und Bilder auf dieser Seite dürfen für die Berichterstattung frei verwendet werden.</p>
+    </div>
+  </div>
+
+  <div class="box"><strong>In einem Satz:</strong> Ult1made TCG ist die Sammlungs-App für 15 Sammelkartenspiele – Karten per Kamera scannen, Master-Sets füllen, Binder und Decks wie in echt verwalten, mit Cardmarket-Preisen und einem optionalen, quelloffenen Server auf der eigenen Hardware.</div>
+
+  <h2>Kurztext (ca. 60 Wörter)</h2>
+  <p>Ult1made TCG bringt 15 Sammelkartenspiele in eine App – von Pokémon und Magic über One Piece und Lorcana bis Final Fantasy. Karten werden per Kamera erkannt, Binder 1:1 nachgebaut, Decks mit Regelcheck gebaut und Werte mit echten Cardmarket-Preisen verfolgt. Ohne Konto und ohne fremde Cloud: Die Daten bleiben auf dem Gerät oder auf dem eigenen, quelloffenen Server. Seit dem 7. September 2026 im App Store.</p>
+
+  <h2>Langtext (ca. 150 Wörter)</h2>
+  <p>Wer mehrere Sammelkartenspiele sammelt, braucht bisher mehrere Apps. Ult1made TCG vereint 15 davon: Pokémon, Magic: The Gathering, One Piece, Disney Lorcana, Yu-Gi-Oh!, Digimon, Dragon Ball Fusion World, Final Fantasy, Flesh and Blood, Star Wars: Unlimited, Altered, Riftbound, Gundam, Cyberpunk und Naruto Kayou.</p>
+  <p>Karten werden mit der Kamera erfasst – die Erkennung ist pro Spiel an echten Karten abgestimmt, auch bei deutschen Drucken und Foil-Varianten. Ein Massenscan nimmt Stapel auf, ein Kontrollbildschirm zeigt jede Karte vor dem Speichern. Binder lassen sich mit 4 bis 16 Taschen pro Seite exakt wie das echte Album nachbauen, Decks bekommen einen Regelcheck für Pokémon, Dragon Ball, Magic (Standard, Pioneer, Commander) und Final Fantasy. Werte basieren auf echten Cardmarket-Preisen in Euro.</p>
+  <p>Das Grundprinzip: keine Konten, keine Cloud des Anbieters. Alles liegt auf dem Gerät, optional synchronisiert ein kostenloser, quelloffener Server auf der eigenen Hardware alle Geräte und liefert eine Weboberfläche für den großen Bildschirm. Ein TCG ist dauerhaft kostenlos, Premium schaltet alle Spiele frei.</p>
+
+  <h2>Fakten</h2>
+  <dl class="facts">
+    <dt>Name</dt><dd>Ult1made TCG</dd>
+    <dt>Entwickler</dt><dd>Christian Meyer, Deutschland (Einzelentwickler)</dd>
+    <dt>Plattformen</dt><dd>iOS (App Store, seit 7. September 2026) · Android (Google Play, in Kürze) · optionaler Server mit Weboberfläche</dd>
+    <dt>Preis</dt><dd>Kostenlos für ein TCG · Premium (alle TCGs, Server-Sync, mehrere Accounts) als Monats- oder Jahresabo oder per Freischalt-Code</dd>
+    <dt>Spiele</dt><dd>
+      <span class="badge">Pokémon</span><span class="badge">Magic: The Gathering</span><span class="badge">One Piece</span><span class="badge">Disney Lorcana</span><span class="badge">Yu-Gi-Oh!</span><span class="badge">Digimon</span><span class="badge">Dragon Ball Fusion World</span><span class="badge">Final Fantasy TCG</span><span class="badge">Flesh and Blood</span><span class="badge">Star Wars: Unlimited</span><span class="badge">Altered</span><span class="badge">Riftbound</span><span class="badge">Gundam Card Game</span><span class="badge">Cyberpunk TCG</span><span class="badge">Naruto Kayou</span>
+    </dd>
+    <dt>Sprachen</dt><dd>Deutsch, Englisch</dd>
+    <dt>Technik</dt><dd>Kotlin Multiplatform und Compose Multiplatform – eine Codebasis für iOS und Android; Server in Kotlin/Ktor, quelloffen auf GitHub (AGPL-3.0)</dd>
+    <dt>Links</dt><dd><a href="https://ult1madetcg.com">ult1madetcg.com</a> · <a href="https://apps.apple.com/app/id6803141402">App Store</a> · <a href="https://github.com/Chr1shie/Ult1madeTCG-Server">Server auf GitHub</a> · <a href="anleitung.html">Handbuch</a></dd>
+    <dt>Kontakt</dt><dd><a href="mailto:support@ult1madetcg.rocks">support@ult1madetcg.rocks</a></dd>
+  </dl>
+
+  <h2>Was Ult1made TCG besonders macht</h2>
+  <ul>
+    <li><strong>15 Spiele, eine App.</strong> Statt pro Spiel eine eigene App – alles in einer Sammlung, mit einheitlicher Bedienung.</li>
+    <li><strong>Kamera-Erkennung an echten Karten getestet.</strong> Jedes Spiel hat seine eigene Erkennungslogik, deutsche Drucke und Foils eingeschlossen.</li>
+    <li><strong>Binder wie im Regal.</strong> Gleiche Seitengröße, gleiche Reihenfolge, Umblättern per Wisch – der echte Binder wird 1:1 digital.</li>
+    <li><strong>Regelcheck beim Deckbau.</strong> Standard, Pioneer und Commander bei Magic inklusive Farbidentität, dazu Pokémon, Dragon Ball und Final Fantasy – offline.</li>
+    <li><strong>Eigene Daten, eigener Server.</strong> Kein Konto, keine Anbieter-Cloud. Der Begleit-Server ist quelloffen und läuft auf Raspberry Pi, NAS oder jedem Linux-Rechner.</li>
+    <li><strong>Holo-Effekte.</strong> Foil-Karten reagieren im Vollbild auf das Gyroskop – Regenbogen, Galaxie, Gold, Glitzer.</li>
+  </ul>
+
+  <h2>Neu in Version 1.1</h2>
+  <ul>
+    <li>Deckbau mit Regelcheck für Magic (Standard, Pioneer, Commander) und Final Fantasy, Decks als 3D-Kästen mit Cover.</li>
+    <li>Fertige Magic-Decks aus dem Vault ins Deckbau-Tool übernehmen; Import aus ManaBox und Decklisten aus Arena, Moxfield oder Archidekt.</li>
+    <li>Deutsche Kartenbilder für Pokémon, Magic, Final Fantasy und Altered.</li>
+    <li>Binder neu einscannen: Karten landen in Scan-Reihenfolge, einzeln oder im Massenscan.</li>
+    <li>Accounts zusammenführen, Freischalt-Code per QR-Code, Foto drehen im Vault.</li>
+  </ul>
+
+  <h2>Bildmaterial</h2>
+  <p>App-Icon, acht Screenshots (iPhone, 1284×2778) und ein Steckbrief – einzeln unten oder gesammelt als ZIP.</p>
+  <a class="dl" href="press/ult1made-tcg-presskit.zip">Presse-Kit herunterladen (ZIP, 2,7 MB)</a>
+  <a class="dl secondary" href="press/icon-512.png">App-Icon (PNG, 512 px)</a>
+  <a class="dl secondary" href="press/factsheet.md">Steckbrief (Text)</a>
+  <div class="shots">
+    <figure><img src="press/01-sammlung.jpg" alt="Sammlung und Master-Sets"><figcaption>Sammlung &amp; Master-Sets</figcaption></figure>
+    <figure><img src="press/02-scanner.jpg" alt="Kamera-Scan"><figcaption>Kamera-Scan</figcaption></figure>
+    <figure><img src="press/03-details.jpg" alt="Kartendetails"><figcaption>Kartendetails mit Cardmarket-Preis</figcaption></figure>
+    <figure><img src="press/04-vollbild-holo.jpg" alt="Vollbild mit Holo-Effekt"><figcaption>Vollbild mit Holo-Effekt</figcaption></figure>
+    <figure><img src="press/05-binder.jpg" alt="Binder"><figcaption>Binder</figcaption></figure>
+    <figure><img src="press/06-deck.jpg" alt="Deckbau"><figcaption>Deckbau mit Regelcheck</figcaption></figure>
+    <figure><img src="press/07-vault.jpg" alt="Vault"><figcaption>Vault (Sealed)</figcaption></figure>
+    <figure><img src="press/08-werte.jpg" alt="Werte"><figcaption>Werte</figcaption></figure>
+  </div>
+
+  <h2>Über den Entwickler</h2>
+  <p>Ult1made TCG entsteht als Ein-Personen-Projekt von Christian Meyer, selbst Sammler mehrerer TCGs. Der Auslöser war das eigene Regal: mehrere Spiele, mehrere Apps, keine davon mit echtem Binder. Die App ist ein privates Fan-Projekt und steht in keiner Verbindung zu den Herstellern der genannten Spiele; alle Namen, Bilder und Marken gehören ihren jeweiligen Rechteinhabern.</p>
+
+  <h2>Rezensionsexemplare</h2>
+  <p>Für Tests stellen wir gern Freischalt-Codes für Premium bereit – kurze Mail an <a href="mailto:support@ult1madetcg.rocks">support@ult1madetcg.rocks</a> genügt.</p>
+</main>
+
+<main id="content-en" style="display:none">
+  <div class="hero">
+    <img src="press/icon-256.png" alt="Ult1made TCG app icon">
+    <div>
+      <h1>Press &amp; Media <span>Ult1made TCG</span></h1>
+      <p class="muted">As of September 2026 · All texts and images on this page may be used freely for coverage.</p>
+    </div>
+  </div>
+
+  <div class="box"><strong>In one sentence:</strong> Ult1made TCG is the collection app for 15 trading card games – scan cards with the camera, complete master sets, manage binders and decks like the real thing, with Cardmarket prices and an optional open-source server on your own hardware.</div>
+
+  <h2>Short text (about 60 words)</h2>
+  <p>Ult1made TCG brings 15 trading card games into one app – from Pokémon and Magic to One Piece, Lorcana and Final Fantasy. Cards are recognized by camera, binders rebuilt 1:1, decks built with a rules check, and values tracked with real Cardmarket prices. No account and no third-party cloud: data stays on the device or on your own open-source server. On the App Store since September 7, 2026.</p>
+
+  <h2>Long text (about 150 words)</h2>
+  <p>Collectors of several trading card games have needed several apps so far. Ult1made TCG unites 15 of them: Pokémon, Magic: The Gathering, One Piece, Disney Lorcana, Yu-Gi-Oh!, Digimon, Dragon Ball Fusion World, Final Fantasy, Flesh and Blood, Star Wars: Unlimited, Altered, Riftbound, Gundam, Cyberpunk and Naruto Kayou.</p>
+  <p>Cards are captured with the camera – recognition is tuned per game against real cards, including German prints and foil variants. Bulk scan takes whole stacks, a review screen shows every card before saving. Binders can be rebuilt exactly like the real album with 4 to 16 pockets per page, decks get a rules check for Pokémon, Dragon Ball, Magic (Standard, Pioneer, Commander) and Final Fantasy. Values are based on real Cardmarket prices in euro.</p>
+  <p>The core principle: no accounts, no vendor cloud. Everything lives on the device; optionally a free, open-source server on your own hardware syncs all devices and serves a web UI for the big screen. One TCG is free forever, Premium unlocks all games.</p>
+
+  <h2>Facts</h2>
+  <dl class="facts">
+    <dt>Name</dt><dd>Ult1made TCG</dd>
+    <dt>Developer</dt><dd>Christian Meyer, Germany (solo developer)</dd>
+    <dt>Platforms</dt><dd>iOS (App Store, since September 7, 2026) · Android (Google Play, coming soon) · optional server with web UI</dd>
+    <dt>Price</dt><dd>Free for one TCG · Premium (all TCGs, server sync, multiple accounts) as monthly or yearly subscription or via unlock code</dd>
+    <dt>Games</dt><dd>
+      <span class="badge">Pokémon</span><span class="badge">Magic: The Gathering</span><span class="badge">One Piece</span><span class="badge">Disney Lorcana</span><span class="badge">Yu-Gi-Oh!</span><span class="badge">Digimon</span><span class="badge">Dragon Ball Fusion World</span><span class="badge">Final Fantasy TCG</span><span class="badge">Flesh and Blood</span><span class="badge">Star Wars: Unlimited</span><span class="badge">Altered</span><span class="badge">Riftbound</span><span class="badge">Gundam Card Game</span><span class="badge">Cyberpunk TCG</span><span class="badge">Naruto Kayou</span>
+    </dd>
+    <dt>Languages</dt><dd>German, English</dd>
+    <dt>Technology</dt><dd>Kotlin Multiplatform and Compose Multiplatform – one code base for iOS and Android; server in Kotlin/Ktor, open source on GitHub (AGPL-3.0)</dd>
+    <dt>Links</dt><dd><a href="https://ult1madetcg.com">ult1madetcg.com</a> · <a href="https://apps.apple.com/app/id6803141402">App Store</a> · <a href="https://github.com/Chr1shie/Ult1madeTCG-Server">Server on GitHub</a> · <a href="anleitung.html">Handbook</a></dd>
+    <dt>Contact</dt><dd><a href="mailto:support@ult1madetcg.rocks">support@ult1madetcg.rocks</a></dd>
+  </dl>
+
+  <h2>What makes Ult1made TCG different</h2>
+  <ul>
+    <li><strong>15 games, one app.</strong> Instead of one app per game – everything in one collection with one consistent UI.</li>
+    <li><strong>Camera recognition tested on real cards.</strong> Every game has its own recognition logic, German prints and foils included.</li>
+    <li><strong>Binders like on your shelf.</strong> Same page size, same order, flip pages with a swipe – the real binder goes digital 1:1.</li>
+    <li><strong>Rules check while deck building.</strong> Standard, Pioneer and Commander for Magic including color identity, plus Pokémon, Dragon Ball and Final Fantasy – offline.</li>
+    <li><strong>Your data, your server.</strong> No account, no vendor cloud. The companion server is open source and runs on a Raspberry Pi, a NAS or any Linux box.</li>
+    <li><strong>Holo effects.</strong> Foil cards react to the gyroscope in fullscreen – Rainbow, Galaxy, Gold, Glitter.</li>
+  </ul>
+
+  <h2>New in version 1.1</h2>
+  <ul>
+    <li>Deck building with rules check for Magic (Standard, Pioneer, Commander) and Final Fantasy, decks as 3D boxes with a cover.</li>
+    <li>Take preconstructed Magic decks from the vault into the deck builder; import from ManaBox and deck lists from Arena, Moxfield or Archidekt.</li>
+    <li>German card images for Pokémon, Magic, Final Fantasy and Altered.</li>
+    <li>Re-scan a binder: cards land in scan order, single or bulk.</li>
+    <li>Merge accounts, unlock codes via QR code, rotate photos in the vault.</li>
+  </ul>
+
+  <h2>Media assets</h2>
+  <p>App icon, eight screenshots (iPhone, 1284×2778) and a fact sheet – individually below or bundled as a ZIP.</p>
+  <a class="dl" href="press/ult1made-tcg-presskit.zip">Download press kit (ZIP, 2.7 MB)</a>
+  <a class="dl secondary" href="press/icon-512.png">App icon (PNG, 512 px)</a>
+  <a class="dl secondary" href="press/factsheet.md">Fact sheet (text)</a>
+  <div class="shots">
+    <figure><img src="press/01-sammlung.jpg" alt="Collection and master sets"><figcaption>Collection &amp; master sets</figcaption></figure>
+    <figure><img src="press/02-scanner.jpg" alt="Camera scan"><figcaption>Camera scan</figcaption></figure>
+    <figure><img src="press/03-details.jpg" alt="Card details"><figcaption>Card details with Cardmarket price</figcaption></figure>
+    <figure><img src="press/04-vollbild-holo.jpg" alt="Fullscreen with holo effect"><figcaption>Fullscreen with holo effect</figcaption></figure>
+    <figure><img src="press/05-binder.jpg" alt="Binder"><figcaption>Binder</figcaption></figure>
+    <figure><img src="press/06-deck.jpg" alt="Deck building"><figcaption>Deck building with rules check</figcaption></figure>
+    <figure><img src="press/07-vault.jpg" alt="Vault"><figcaption>Vault (sealed)</figcaption></figure>
+    <figure><img src="press/08-werte.jpg" alt="Values"><figcaption>Values</figcaption></figure>
+  </div>
+
+  <h2>About the developer</h2>
+  <p>Ult1made TCG is a one-person project by Christian Meyer, himself a collector of several TCGs. The trigger was his own shelf: several games, several apps, none of them with a real binder. The app is a private fan project and is not affiliated with the publishers of the games mentioned; all names, images and trademarks belong to their respective owners.</p>
+
+  <h2>Review copies</h2>
+  <p>For reviews we gladly provide Premium unlock codes – a short mail to <a href="mailto:support@ult1madetcg.rocks">support@ult1madetcg.rocks</a> is enough.</p>
+</main>
+
+<script>
+(function () {
+  var de = document.getElementById('content-de');
+  var en = document.getElementById('content-en');
+  var bDe = document.getElementById('lang-de');
+  var bEn = document.getElementById('lang-en');
+  var head = document.getElementById('headTitle');
+  function setLang(l) {
+    de.style.display = l === 'de' ? '' : 'none';
+    en.style.display = l === 'en' ? '' : 'none';
+    bDe.className = 'langBtn' + (l === 'de' ? ' active' : '');
+    bEn.className = 'langBtn' + (l === 'en' ? ' active' : '');
+    head.textContent = l === 'de' ? 'Presse' : 'Press';
+    document.documentElement.lang = l;
+    try { localStorage.setItem('ult1madeLang', l); } catch (e) {}
+  }
+  bDe.addEventListener('click', function () { setLang('de'); });
+  bEn.addEventListener('click', function () { setLang('en'); });
+  var stored = null;
+  try { stored = localStorage.getItem('ult1madeLang'); } catch (e) {}
+  var nav = (navigator.language || 'en').slice(0, 2);
+  setLang(stored === 'de' || stored === 'en' ? stored : (nav === 'de' ? 'de' : 'en'));
+})();
+</script>
+</body>
+</html>
